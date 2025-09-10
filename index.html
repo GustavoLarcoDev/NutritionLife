@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nutricionista | Planes Personalizados</title>
+  <meta name="description" content="Planes de nutrición: básico, intermedio y avanzado. Contáctanos por WhatsApp para comenzar hoy." />
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">NutriVida</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="#planes">Planes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item">
+            <a class="btn btn-success" href="#contacto">
+              <i class="bi bi-whatsapp me-1"></i> WhatsApp
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Carousel -->
+  <header class="hero-carousel">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="4000">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1600&auto=format&fit=crop" class="d-block w-100 object-fit-cover" alt="Alimentos saludables" />
+          <div class="carousel-caption d-none d-md-block">
+            <h1 class="display-5 fw-bold text-shadow">Alimentación Saludable</h1>
+            <p class="lead text-shadow">Planes personalizados para cada objetivo.</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="https://images.unsplash.com/photo-1514996937319-344454492b37?q=80&w=1600&auto=format&fit=crop" class="d-block w-100 object-fit-cover" alt="Nutricionista" />
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="fw-bold text-shadow">Acompañamiento Profesional</h2>
+            <p class="text-shadow">Seguimiento y ajustes según tu progreso.</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?q=80&w=1600&auto=format&fit=crop" class="d-block w-100 object-fit-cover" alt="Comida balanceada" />
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="fw-bold text-shadow">Resultados Reales</h2>
+            <p class="text-shadow">Mejora tu rendimiento, salud y bienestar.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Plans Section -->
+  <section id="planes" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Elige tu Plan</h2>
+        <p class="text-muted">Tres opciones para diferentes necesidades y objetivos.</p>
+      </div>
+      <div class="row g-4">
+        <!-- Plan Básico -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm plan-card border-0">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Plan Básico</h5>
+              <p class="card-text flex-grow-1">Evaluación inicial y plan alimenticio mensual con recomendaciones básicas.</p>
+              <ul class="list-unstyled small text-muted mb-4">
+                <li><i class="bi bi-check-circle text-success me-2"></i>Plan mensual</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i>Guía de porciones</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i>1 ajuste</li>
+              </ul>
+              <div class="d-flex align-items-baseline gap-2 mb-3">
+                <span class="h4 mb-0">$29</span>
+                <span class="text-muted">/ mes</span>
+              </div>
+              <button class="btn btn-outline-success w-100 btn-whatsapp" data-plan="Básico">
+                <i class="bi bi-whatsapp me-2"></i>Me interesa
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Plan Intermedio -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm plan-card border-0 highlight">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start">
+                <h5 class="card-title">Plan Intermedio</h5>
+                <span class="badge text-bg-success">Popular</span>
+              </div>
+              <p class="card-text flex-grow-1">Plan personalizado con seguimiento quincenal y soporte por chat.</p>
+              <ul class="list-unstyled small text-muted mb-4">
+                <li><i class="bi bi-check-circle text-success me-2"></i>Plan mensual personalizado</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i>Seguimiento quincenal</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i>Soporte por chat</li>
+              </ul>
+              <div class="d-flex align-items-baseline gap-2 mb-3">
+                <span class="h4 mb-0">$49</span>
+                <span class="text-muted">/ mes</span>
+              </div>
+              <button class="btn btn-success w-100 btn-whatsapp" data-plan="Intermedio">
+                <i class="bi bi-whatsapp me-2"></i>Me interesa
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Plan Avanzado -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm plan-card border-0">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Plan Avanzado</h5>
+              <p class="card-text flex-grow-1">Optimización total: plan semanal, seguimiento semanal y ajuste continuo.</p>
+              <ul class="list-unstyled small text-muted mb-4">
+                <li><i class="bi bi-check-circle text-success me-2"></i>Plan semanal</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i>Seguimiento semanal</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i>Ajustes ilimitados</li>
+              </ul>
+              <div class="d-flex align-items-baseline gap-2 mb-3">
+                <span class="h4 mb-0">$79</span>
+                <span class="text-muted">/ mes</span>
+              </div>
+              <button class="btn btn-outline-success w-100 btn-whatsapp" data-plan="Avanzado">
+                <i class="bi bi-whatsapp me-2"></i>Me interesa
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp Contact Section -->
+  <section id="contacto" class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-12 col-lg-6">
+          <h3 class="fw-bold mb-3">¿Listo para comenzar?</h3>
+          <p class="text-muted mb-4">Escríbenos por WhatsApp y cuéntanos tus objetivos. Te responderemos a la brevedad.</p>
+          <div class="d-flex gap-3">
+            <a class="btn btn-success" target="_blank" rel="noopener" href="https://wa.me/593982752956">
+              <i class="bi bi-whatsapp me-2"></i>Chatear ahora
+            </a>
+            <a class="btn btn-outline-secondary" href="#planes">Ver planes</a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title mb-3">Enviar mensaje por WhatsApp</h5>
+              <form id="whatsappForm" class="row g-3">
+                <div class="col-12">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required />
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="telefono" class="form-label">Teléfono (opcional)</label>
+                  <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Tu número" />
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="plan" class="form-label">Plan de interés</label>
+                  <select id="plan" name="plan" class="form-select">
+                    <option value="General" selected>General</option>
+                    <option value="Básico">Básico</option>
+                    <option value="Intermedio">Intermedio</option>
+                    <option value="Avanzado">Avanzado</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="objetivo" class="form-label">Objetivo</label>
+                  <textarea class="form-control" id="objetivo" name="objetivo" rows="3" placeholder="Por ejemplo: bajar de peso, mejorar rendimiento, etc." required></textarea>
+                </div>
+                <div class="col-12 d-grid">
+                  <button type="submit" class="btn btn-success">
+                    <i class="bi bi-send me-2"></i>Enviar a WhatsApp
+                  </button>
+                </div>
+              </form>
+              <p class="form-text mt-2">Se abrirá WhatsApp con tu mensaje pre-llenado.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 border-top bg-white">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      <div class="small text-muted">© <span id="year"></span> NutriVida. Todos los derechos reservados.</div>
+      <div class="d-flex gap-3 small">
+        <a class="link-secondary text-decoration-none" href="#planes">Planes</a>
+        <a class="link-secondary text-decoration-none" href="#contacto">Contacto</a>
+        <a class="link-secondary text-decoration-none" target="_blank" rel="noopener" href="https://wa.me/593982752956"><i class="bi bi-whatsapp me-1"></i>WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- App JS -->
+  <script src="./main.js"></script>
+</body>
+</html>
