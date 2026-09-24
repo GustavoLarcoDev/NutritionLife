@@ -2,236 +2,393 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nutricionista | Planes Personalizados</title>
-  <meta name="description" content="Planes de nutrición: básico, intermedio y avanzado. Contáctanos por WhatsApp para comenzar hoy." />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>NutriVida · Planes de nutrición personalizados</title>
+  <meta name="description" content="NutriVida: planes de nutrición Básico, Intermedio y Avanzado desde $29/mes, con seguimiento y ajustes según tu progreso. Escríbenos por WhatsApp y empieza hoy." />
+  <link rel="canonical" href="https://gustavolarcodev.github.io/NutritionLife/" />
+  <meta name="theme-color" content="#f7f4ec" />
 
-  <!-- Bootstrap 5 CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-    crossorigin="anonymous"
-  />
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_EC" />
+  <meta property="og:site_name" content="NutriVida" />
+  <meta property="og:title" content="NutriVida · Planes de nutrición personalizados" />
+  <meta property="og:description" content="Planes Básico, Intermedio y Avanzado desde $29/mes, con seguimiento y ajustes según tu progreso. Escríbenos por WhatsApp." />
+  <meta property="og:url" content="https://gustavolarcodev.github.io/NutritionLife/" />
+  <meta property="og:image" content="https://gustavolarcodev.github.io/NutritionLife/assets/img/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="NutriVida — Alimentación saludable, a tu medida" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NutriVida · Planes de nutrición personalizados" />
+  <meta name="twitter:description" content="Planes Básico, Intermedio y Avanzado desde $29/mes, con seguimiento por WhatsApp." />
+  <meta name="twitter:image" content="https://gustavolarcodev.github.io/NutritionLife/assets/img/og-image.jpg" />
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="./assets/img/apple-touch-icon.png" />
 
-  <!-- Custom Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600&display=swap" />
+
+  <link rel="preload" as="image" type="image/webp"
+        imagesrcset="./assets/img/hero-bowl-700.webp 700w, ./assets/img/hero-bowl-1200.webp 1200w"
+        imagesizes="(min-width: 960px) 540px, 88vw" fetchpriority="high" />
+
   <link rel="stylesheet" href="./styles.css" />
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="./main.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "NutriVida",
+    "description": "Planes de nutrición personalizados con seguimiento y ajustes según tu progreso.",
+    "url": "https://gustavolarcodev.github.io/NutritionLife/",
+    "telephone": "+593982752956",
+    "image": "https://gustavolarcodev.github.io/NutritionLife/assets/img/og-image.jpg",
+    "makesOffer": [
+      { "@type": "Offer", "name": "Plan Básico", "price": "29", "priceCurrency": "USD",
+        "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29", "priceCurrency": "USD", "unitText": "mes" } },
+      { "@type": "Offer", "name": "Plan Intermedio", "price": "49", "priceCurrency": "USD",
+        "priceSpecification": { "@type": "UnitPriceSpecification", "price": "49", "priceCurrency": "USD", "unitText": "mes" } },
+      { "@type": "Offer", "name": "Plan Avanzado", "price": "79", "priceCurrency": "USD",
+        "priceSpecification": { "@type": "UnitPriceSpecification", "price": "79", "priceCurrency": "USD", "unitText": "mes" } }
+    ]
+  }
+  </script>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">NutriVida</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-          <li class="nav-item"><a class="nav-link" href="#planes">Planes</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-          <li class="nav-item">
-            <a class="btn btn-success" href="#contacto">
-              <i class="bi bi-whatsapp me-1"></i> WhatsApp
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-whatsapp" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-11 11M22 2l-7 20-4-9-9-4 20-7Z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></symbol>
+    <symbol id="i-plan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2M12 11h4M12 16h4M8 11h.01M8 16h.01"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8M21 3v5h-5M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16M8 16H3v5"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-logo" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="#1f7a4d"/><path d="M9 23.5C9 14.5 14.5 9 23.5 9c0 9-5.5 14.5-14.5 14.5Z" fill="#c8e86b"/><path d="M9.5 23 18 14.5" stroke="#1f7a4d" stroke-width="1.6" stroke-linecap="round"/><circle cx="23" cy="23" r="2.4" fill="#f4a261"/></symbol>
+  </svg>
 
-  <!-- Hero Carousel -->
-  <header class="hero-carousel">
-    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="4000">
-          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1600&auto=format&fit=crop" class="d-block w-100 object-fit-cover" alt="Alimentos saludables" />
-          <div class="carousel-caption d-none d-md-block">
-            <h1 class="display-5 fw-bold text-shadow">Alimentación Saludable</h1>
-            <p class="lead text-shadow">Planes personalizados para cada objetivo.</p>
-          </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="4000">
-          <img src="https://images.unsplash.com/photo-1514996937319-344454492b37?q=80&w=1600&auto=format&fit=crop" class="d-block w-100 object-fit-cover" alt="Nutricionista" />
-          <div class="carousel-caption d-none d-md-block">
-            <h2 class="fw-bold text-shadow">Acompañamiento Profesional</h2>
-            <p class="text-shadow">Seguimiento y ajustes según tu progreso.</p>
-          </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="4000">
-          <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?q=80&w=1600&auto=format&fit=crop" class="d-block w-100 object-fit-cover" alt="Comida balanceada" />
-          <div class="carousel-caption d-none d-md-block">
-            <h2 class="fw-bold text-shadow">Resultados Reales</h2>
-            <p class="text-shadow">Mejora tu rendimiento, salud y bienestar.</p>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Anterior</span>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="NutriVida, ir al inicio">
+        <svg class="brand-mark" aria-hidden="true"><use href="#i-logo"/></svg>
+        <span class="brand-word">Nutri<span>Vida</span></span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+        <span class="sr-only">Abrir menú</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Siguiente</span>
-      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Principal">
+        <ul>
+          <li><a href="#como-funciona">Cómo funciona</a></li>
+          <li><a href="#planes">Planes</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <a class="btn btn-primary btn-sm" href="https://wa.me/593982752956" target="_blank" rel="noopener">
+          <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+          Escríbenos
+        </a>
+      </nav>
     </div>
   </header>
+  <div class="scroll-sentinel" aria-hidden="true"></div>
 
-  <!-- Plans Section -->
-  <section id="planes" class="py-5 bg-light">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold">Elige tu Plan</h2>
-        <p class="text-muted">Tres opciones para diferentes necesidades y objetivos.</p>
-      </div>
-      <div class="row g-4">
-        <!-- Plan Básico -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm plan-card border-0">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Plan Básico</h5>
-              <p class="card-text flex-grow-1">Evaluación inicial y plan alimenticio mensual con recomendaciones básicas.</p>
-              <ul class="list-unstyled small text-muted mb-4">
-                <li><i class="bi bi-check-circle text-success me-2"></i>Plan mensual</li>
-                <li><i class="bi bi-check-circle text-success me-2"></i>Guía de porciones</li>
-                <li><i class="bi bi-check-circle text-success me-2"></i>1 ajuste</li>
-              </ul>
-              <div class="d-flex align-items-baseline gap-2 mb-3">
-                <span class="h4 mb-0">$29</span>
-                <span class="text-muted">/ mes</span>
-              </div>
-              <button class="btn btn-outline-success w-100 btn-whatsapp" data-plan="Básico">
-                <i class="bi bi-whatsapp me-2"></i>Me interesa
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- Plan Intermedio -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm plan-card border-0 highlight">
-            <div class="card-body d-flex flex-column">
-              <div class="d-flex justify-content-between align-items-start">
-                <h5 class="card-title">Plan Intermedio</h5>
-                <span class="badge text-bg-success">Popular</span>
-              </div>
-              <p class="card-text flex-grow-1">Plan personalizado con seguimiento quincenal y soporte por chat.</p>
-              <ul class="list-unstyled small text-muted mb-4">
-                <li><i class="bi bi-check-circle text-success me-2"></i>Plan mensual personalizado</li>
-                <li><i class="bi bi-check-circle text-success me-2"></i>Seguimiento quincenal</li>
-                <li><i class="bi bi-check-circle text-success me-2"></i>Soporte por chat</li>
-              </ul>
-              <div class="d-flex align-items-baseline gap-2 mb-3">
-                <span class="h4 mb-0">$49</span>
-                <span class="text-muted">/ mes</span>
-              </div>
-              <button class="btn btn-success w-100 btn-whatsapp" data-plan="Intermedio">
-                <i class="bi bi-whatsapp me-2"></i>Me interesa
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- Plan Avanzado -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm plan-card border-0">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Plan Avanzado</h5>
-              <p class="card-text flex-grow-1">Optimización total: plan semanal, seguimiento semanal y ajuste continuo.</p>
-              <ul class="list-unstyled small text-muted mb-4">
-                <li><i class="bi bi-check-circle text-success me-2"></i>Plan semanal</li>
-                <li><i class="bi bi-check-circle text-success me-2"></i>Seguimiento semanal</li>
-                <li><i class="bi bi-check-circle text-success me-2"></i>Ajustes ilimitados</li>
-              </ul>
-              <div class="d-flex align-items-baseline gap-2 mb-3">
-                <span class="h4 mb-0">$79</span>
-                <span class="text-muted">/ mes</span>
-              </div>
-              <button class="btn btn-outline-success w-100 btn-whatsapp" data-plan="Avanzado">
-                <i class="bi bi-whatsapp me-2"></i>Me interesa
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WhatsApp Contact Section -->
-  <section id="contacto" class="py-5">
-    <div class="container">
-      <div class="row g-4 align-items-center">
-        <div class="col-12 col-lg-6">
-          <h3 class="fw-bold mb-3">¿Listo para comenzar?</h3>
-          <p class="text-muted mb-4">Escríbenos por WhatsApp y cuéntanos tus objetivos. Te responderemos a la brevedad.</p>
-          <div class="d-flex gap-3">
-            <a class="btn btn-success" target="_blank" rel="noopener" href="https://wa.me/593982752956">
-              <i class="bi bi-whatsapp me-2"></i>Chatear ahora
+  <main id="contenido" tabindex="-1">
+    <!-- Hero -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg>
+            Coaching nutricional personalizado
+          </p>
+          <h1 id="hero-title">Alimentación saludable, <em>a tu medida.</em></h1>
+          <p class="lead">Planes personalizados para cada objetivo, con seguimiento y ajustes según tu progreso. Sin fórmulas genéricas: un plan pensado para ti.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="#planes">
+              Ver planes
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
-            <a class="btn btn-outline-secondary" href="#planes">Ver planes</a>
+            <a class="btn btn-ghost btn-lg" href="https://wa.me/593982752956" target="_blank" rel="noopener">
+              <svg class="icon icon-wa" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+              Hablar por WhatsApp
+            </a>
+          </div>
+          <ul class="hero-facts" aria-label="Datos de los planes">
+            <li><strong>Desde $29</strong>/mes</li>
+            <li>Seguimiento quincenal o semanal</li>
+            <li>Soporte por chat</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-disc" aria-hidden="true"></div>
+          <div class="hero-ring" aria-hidden="true"></div>
+          <picture class="hero-photo">
+            <source type="image/webp"
+                    srcset="./assets/img/hero-bowl-700.webp 700w, ./assets/img/hero-bowl-1200.webp 1200w"
+                    sizes="(min-width: 960px) 540px, 88vw" />
+            <img src="./assets/img/hero-bowl-1200.jpg" width="1200" height="1200" fetchpriority="high"
+                 alt="Bowl de ensalada con tomates cherry, garbanzos, aguacate, camote, col morada y rábano sandía, visto desde arriba" />
+          </picture>
+          <div class="float-card float-card--a" aria-hidden="true">
+            <span class="float-ico"><svg class="icon"><use href="#i-plan"/></svg></span>
+            <span><small>Plan Intermedio</small><b>$49<span>/mes</span></b></span>
+          </div>
+          <div class="float-card float-card--b" aria-hidden="true">
+            <span class="float-ico float-ico--lime"><svg class="icon"><use href="#i-calendar"/></svg></span>
+            <span><small>Incluye</small><b>Seguimiento quincenal</b></span>
           </div>
         </div>
-        <div class="col-12 col-lg-6">
-          <div class="card shadow-sm border-0">
-            <div class="card-body">
-              <h5 class="card-title mb-3">Enviar mensaje por WhatsApp</h5>
-              <form id="whatsappForm" class="row g-3">
-                <div class="col-12">
-                  <label for="nombre" class="form-label">Nombre</label>
-                  <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required />
-                </div>
-                <div class="col-12 col-md-6">
-                  <label for="telefono" class="form-label">Teléfono (opcional)</label>
-                  <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Tu número" />
-                </div>
-                <div class="col-12 col-md-6">
-                  <label for="plan" class="form-label">Plan de interés</label>
-                  <select id="plan" name="plan" class="form-select">
-                    <option value="General" selected>General</option>
-                    <option value="Básico">Básico</option>
-                    <option value="Intermedio">Intermedio</option>
-                    <option value="Avanzado">Avanzado</option>
-                  </select>
-                </div>
-                <div class="col-12">
-                  <label for="objetivo" class="form-label">Objetivo</label>
-                  <textarea class="form-control" id="objetivo" name="objetivo" rows="3" placeholder="Por ejemplo: bajar de peso, mejorar rendimiento, etc." required></textarea>
-                </div>
-                <div class="col-12 d-grid">
-                  <button type="submit" class="btn btn-success">
-                    <i class="bi bi-send me-2"></i>Enviar a WhatsApp
-                  </button>
-                </div>
-              </form>
-              <p class="form-text mt-2">Se abrirá WhatsApp con tu mensaje pre-llenado.</p>
+      </div>
+    </section>
+
+    <!-- Cómo funciona -->
+    <section class="section process" id="como-funciona" aria-labelledby="proceso-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker">Cómo funciona</p>
+          <h2 id="proceso-title">Tres pasos para empezar a comer mejor</h2>
+          <p>Un proceso simple y cercano: todo empieza con una conversación por WhatsApp.</p>
+        </header>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">01</span>
+            <span class="step-ico"><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg></span>
+            <h3>Cuéntanos tu objetivo</h3>
+            <p>Escríbenos por WhatsApp o completa el formulario: bajar de peso, mejorar tu rendimiento o simplemente comer mejor.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">02</span>
+            <span class="step-ico"><svg class="icon" aria-hidden="true"><use href="#i-plan"/></svg></span>
+            <h3>Recibe tu plan</h3>
+            <p>Evaluación inicial y un plan alimenticio personalizado, mensual o semanal según el plan que elijas.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">03</span>
+            <span class="step-ico"><svg class="icon" aria-hidden="true"><use href="#i-refresh"/></svg></span>
+            <h3>Seguimiento y ajustes</h3>
+            <p>Revisamos tu progreso y ajustamos el plan contigo, con la frecuencia que incluya el plan que elijas.</p>
+          </li>
+        </ol>
+
+        <div class="pillars reveal">
+          <figure class="pillars-media">
+            <picture>
+              <source type="image/webp" srcset="./assets/img/training-700.webp 700w, ./assets/img/training-1200.webp 1200w" sizes="(min-width: 960px) 560px, 92vw" />
+              <img src="./assets/img/training-700.webp" width="1200" height="900" loading="lazy" decoding="async"
+                   alt="Grupo de mujeres entrenando con mancuernas en un estudio con paredes de ladrillo" />
+            </picture>
+          </figure>
+          <div class="pillars-copy">
+            <h3>Más que una dieta: un acompañamiento</h3>
+            <ul class="pillar-list">
+              <li>
+                <span class="pillar-ico"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
+                <div><h4>Alimentación saludable</h4><p>Planes personalizados para cada objetivo.</p></div>
+              </li>
+              <li>
+                <span class="pillar-ico"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg></span>
+                <div><h4>Acompañamiento profesional</h4><p>Seguimiento y ajustes según tu progreso.</p></div>
+              </li>
+              <li>
+                <span class="pillar-ico"><svg class="icon" aria-hidden="true"><use href="#i-refresh"/></svg></span>
+                <div><h4>Hábitos que se sostienen</h4><p>Pensado para mejorar tu rendimiento, salud y bienestar.</p></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Planes -->
+    <section class="section pricing" id="planes" aria-labelledby="planes-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker">Planes</p>
+          <h2 id="planes-title">Elige tu plan</h2>
+          <p>Tres opciones para diferentes necesidades y objetivos.</p>
+        </header>
+
+        <div class="plans">
+          <article class="plan reveal" aria-labelledby="plan-basico">
+            <h3 id="plan-basico">Plan Básico</h3>
+            <p class="plan-desc">Evaluación inicial y plan alimenticio mensual con recomendaciones básicas.</p>
+            <p class="price"><span class="price-amt">$29</span><span class="price-per">/mes<span class="sr-only"> (por mes)</span></span></p>
+            <ul class="features">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Plan mensual</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Guía de porciones</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>1 ajuste</li>
+            </ul>
+            <div class="plan-cta">
+              <a class="btn btn-outline btn-block" href="https://wa.me/593982752956?text=Hola%2C%20me%20interesa%20el%20Plan%20B%C3%A1sico." target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                Me interesa<span class="sr-only"> el Plan Básico</span>
+              </a>
+              <a class="plan-form-link" href="#contacto" data-plan="Básico">o completa el formulario<span class="sr-only"> con el Plan Básico</span></a>
+            </div>
+          </article>
+
+          <article class="plan plan--featured reveal" aria-labelledby="plan-intermedio">
+            <span class="plan-badge">Popular</span>
+            <h3 id="plan-intermedio">Plan Intermedio</h3>
+            <p class="plan-desc">Plan personalizado con seguimiento quincenal y soporte por chat.</p>
+            <p class="price"><span class="price-amt">$49</span><span class="price-per">/mes<span class="sr-only"> (por mes)</span></span></p>
+            <ul class="features">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Plan mensual personalizado</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Seguimiento quincenal</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Soporte por chat</li>
+            </ul>
+            <div class="plan-cta">
+              <a class="btn btn-lime btn-block" href="https://wa.me/593982752956?text=Hola%2C%20me%20interesa%20el%20Plan%20Intermedio." target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                Me interesa<span class="sr-only"> el Plan Intermedio</span>
+              </a>
+              <a class="plan-form-link" href="#contacto" data-plan="Intermedio">o completa el formulario<span class="sr-only"> con el Plan Intermedio</span></a>
+            </div>
+          </article>
+
+          <article class="plan reveal" aria-labelledby="plan-avanzado">
+            <h3 id="plan-avanzado">Plan Avanzado</h3>
+            <p class="plan-desc">Optimización total: plan semanal, seguimiento semanal y ajuste continuo.</p>
+            <p class="price"><span class="price-amt">$79</span><span class="price-per">/mes<span class="sr-only"> (por mes)</span></span></p>
+            <ul class="features">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Plan semanal</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Seguimiento semanal</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Ajustes ilimitados</li>
+            </ul>
+            <div class="plan-cta">
+              <a class="btn btn-outline btn-block" href="https://wa.me/593982752956?text=Hola%2C%20me%20interesa%20el%20Plan%20Avanzado." target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                Me interesa<span class="sr-only"> el Plan Avanzado</span>
+              </a>
+              <a class="plan-form-link" href="#contacto" data-plan="Avanzado">o completa el formulario<span class="sr-only"> con el Plan Avanzado</span></a>
+            </div>
+          </article>
+        </div>
+        <p class="plans-note reveal">Precios en USD. ¿No sabes cuál elegir? <a href="https://wa.me/593982752956" target="_blank" rel="noopener">Escríbenos</a> y te ayudamos a decidir.</p>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section contact" id="contacto" aria-labelledby="contacto-title">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div class="contact-copy">
+            <p class="kicker kicker--light">Contacto</p>
+            <h2 id="contacto-title">¿Listo para comenzar?</h2>
+            <p class="contact-lead">Escríbenos por WhatsApp y cuéntanos tus objetivos. Te responderemos a la brevedad.</p>
+
+            <a class="wa-line" href="https://wa.me/593982752956" target="_blank" rel="noopener">
+              <span class="wa-line-ico"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg></span>
+              <span><small>WhatsApp</small><b>+593 98 275 2956</b></span>
+            </a>
+
+            <ol class="next-steps">
+              <li>Completa el formulario con tu nombre, plan y objetivo.</li>
+              <li>Se abrirá WhatsApp con tu mensaje listo para enviar.</li>
+              <li>Te respondemos para coordinar tu evaluación inicial.</li>
+            </ol>
+
+            <div class="contact-actions">
+              <a class="btn btn-lime" href="https://wa.me/593982752956" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                Chatear ahora
+              </a>
+              <a class="btn btn-ghost-light" href="#planes">Ver planes</a>
             </div>
           </div>
+
+          <div class="form-card">
+            <h3>Enviar mensaje por WhatsApp</h3>
+            <p class="form-sub">Se abrirá WhatsApp con tu mensaje pre-llenado.</p>
+            <form id="whatsappForm" novalidate>
+              <div class="field">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name" required aria-describedby="nombre-error" />
+                <p class="field-error" id="nombre-error" hidden>Escribe tu nombre.</p>
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="telefono">Teléfono <span class="opt">(opcional)</span></label>
+                  <input type="tel" id="telefono" name="telefono" placeholder="Tu número" autocomplete="tel" inputmode="tel" />
+                </div>
+                <div class="field">
+                  <label for="plan">Plan de interés</label>
+                  <div class="select-wrap">
+                    <select id="plan" name="plan">
+                      <option value="General" selected>General</option>
+                      <option value="Básico">Básico · $29/mes</option>
+                      <option value="Intermedio">Intermedio · $49/mes</option>
+                      <option value="Avanzado">Avanzado · $79/mes</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <label for="objetivo">Objetivo</label>
+                <textarea id="objetivo" name="objetivo" rows="3" placeholder="Por ejemplo: bajar de peso, mejorar rendimiento, etc." required aria-describedby="objetivo-error"></textarea>
+                <p class="field-error" id="objetivo-error" hidden>Cuéntanos brevemente tu objetivo.</p>
+              </div>
+
+              <div class="preview" aria-hidden="true">
+                <span class="preview-label">Vista previa del mensaje</span>
+                <p class="preview-text" id="preview"></p>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block btn-lg">
+                <svg class="icon" aria-hidden="true"><use href="#i-send"/></svg>
+                Enviar a WhatsApp
+              </button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Footer -->
-  <footer class="py-4 border-top bg-white">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-      <div class="small text-muted">© <span id="year"></span> NutriVida. Todos los derechos reservados.</div>
-      <div class="d-flex gap-3 small">
-        <a class="link-secondary text-decoration-none" href="#planes">Planes</a>
-        <a class="link-secondary text-decoration-none" href="#contacto">Contacto</a>
-        <a class="link-secondary text-decoration-none" target="_blank" rel="noopener" href="https://wa.me/593982752956"><i class="bi bi-whatsapp me-1"></i>WhatsApp</a>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#inicio">
+          <svg class="brand-mark" aria-hidden="true"><use href="#i-logo"/></svg>
+          <span class="brand-word">Nutri<span>Vida</span></span>
+        </a>
+        <p>Planes de nutrición personalizados con seguimiento por WhatsApp.</p>
       </div>
+      <nav class="footer-nav" aria-label="Pie de página">
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#planes">Planes</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a class="footer-wa" href="https://wa.me/593982752956" target="_blank" rel="noopener">
+        <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+        +593 98 275 2956
+      </a>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> NutriVida. Todos los derechos reservados.</p>
     </div>
   </footer>
 
-  <!-- Bootstrap 5 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-  <!-- App JS -->
-  <script src="./main.js"></script>
+  <a class="wa-fab" href="https://wa.me/593982752956" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+  </a>
 </body>
 </html>
