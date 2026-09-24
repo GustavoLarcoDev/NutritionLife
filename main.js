@@ -59,17 +59,38 @@
           io.unobserve(entry.target);
         }
       });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0 });
     reveals.forEach((el) => io.observe(el));
+    // Safety net for fast or programmatic jumps: reveal anything already above the fold line
+    const sweep = () => {
+      const limit = window.innerHeight;
+      reveals.forEach((el) => {
+        if (!el.classList.contains('is-in') && el.getBoundingClientRect().top < limit) {
+          el.classList.add('is-in');
+          io.unobserve(el);
+        }
+      });
+    };
+    ['scrollend', 'hashchange', 'load'].forEach((evt) => window.addEventListener(evt, sweep, { passive: true }));
   }
 
-  /* Floating WhatsApp button: hidden while the contact section is on screen */
+  /* Floating WhatsApp button: hidden while the hero CTAs or the contact section are on screen */
   const fab = $('.wa-fab');
+  const heroActions = $('.hero-actions');
   const contact = $('#contacto');
-  if (fab && contact && hasIO) {
-    new IntersectionObserver(([entry]) => {
-      fab.classList.toggle('is-hidden', entry.isIntersecting);
-    }, { threshold: 0.2 }).observe(contact);
+  if (fab && hasIO) {
+    const visible = new Set();
+    if (heroActions) fab.classList.add('is-hidden');
+    const sync = () => fab.classList.toggle('is-hidden', visible.size > 0);
+    const watch = (el, threshold) => {
+      if (!el) return;
+      new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) visible.add(el); else visible.delete(el);
+        sync();
+      }, { threshold }).observe(el);
+    };
+    watch(heroActions, 0);
+    watch(contact, 0.2);
   }
 
   /* WhatsApp form */
